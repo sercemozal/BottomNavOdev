@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/toplamaFragment">
+
+    <fragment
+        android:id="@+id/toplamaFragment"
+        android:name="com.sercem.bottomnavodev.ToplamaFragment"
+        android:label="fragment_toplama"
+        tools:layout="@layout/fragment_toplama" >
+        <action
+            android:id="@+id/toplamaGecis"
+            app:destination="@id/toplamaSonucFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carpmaFragment"
+        android:name="com.sercem.bottomnavodev.CarpmaFragment"
+        android:label="fragment_carpma"
+        tools:layout="@layout/fragment_carpma" >
+        <action
+            android:id="@+id/carpmaGecis"
+            app:destination="@id/carpmaSonucFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toplamaSonucFragment"
+        android:name="com.sercem.bottomnavodev.ToplamaSonucFragment"
+        android:label="fragment_toplama_sonuc"
+        tools:layout="@layout/fragment_toplama_sonuc" >
+        <argument
+            android:name="toplamaSonuc"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/carpmaSonucFragment"
+        android:name="com.sercem.bottomnavodev.CarpmaSonucFragment"
+        android:label="fragment_carpma_sonuc"
+        tools:layout="@layout/fragment_carpma_sonuc" >
+        <argument
+            android:name="carpmaSonuc"
+            app:argType="string" />
+    </fragment>
+</navigation>
